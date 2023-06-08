@@ -1,9 +1,15 @@
 <div class="container">
- <app-cockpit></app-cockpit>
-  <hr>
+  <app-cockpit></app-cockpit>
+  <hr />
   <div class="row">
     <div class="col-xs-12">
-     <app-server-element *ngfor="let severElement of serverElements"></app-server-element>
+      <!--LINK server-element/server-element.component.html -->
+      <!-- NOTE The serverElements on parent app each value as a element prop for child element -->
+      <app-server-element
+        *ngFor="let severElement of serverElements"
+        [srvElement]="severElement"
+      >
+      </app-server-element>
     </div>
   </div>
 </div>
